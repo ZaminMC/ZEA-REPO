@@ -1,0 +1,24 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/manifest.json"],
+      "url": "./schemas/manifest.schema.json"
+    },
+    {
+      "fileMatch": ["/datasets/badges.json"],
+      "url": "./schemas/badges.schema.json"
+    },
+    {
+      "fileMatch": ["/datasets/channels.json"],
+      "url": "./schemas/channels.schema.json"
+    },
+    {
+      "fileMatch": ["/datasets/nations/*.json"],
+      "url": "./schemas/nation.schema.json"
+    },
+    {
+      "fileMatch": ["/datasets/towns/*.json"],
+      "url": "./schemas/town.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "format": "zea-repo/channels",
+  "version": 1,
+  "writeChannels": [
+    {
+      "id": "global",
+      "name": "Global",
+      "commands": ["g", "global"]
+    },
+    {
+      "id": "local",
+      "name": "Local",
+      "commands": ["local"]
+    },
+    {
+      "id": "trade",
+      "name": "Trade",
+      "commands": ["tradechat"]
+    },
+    {
+      "id": "nation",
+      "name": "Nation",
+      "commands": ["nc", "nationchat"]
+    },
+    {
+      "id": "town",
+      "name": "Town",
+      "commands": ["tc"]
+    }
+  ],
+  "readonlyFeeds": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "note": "Messages forwarded from Discord with a [Discord] prefix. Players reply through normal in-game chat; there is no /discordchat command."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ZaminMC/ZEA-REPO/main/schemas/channels.schema.json",
+  "title": "ZEA-REPO channels dataset",
+  "description": "EarthMC server chat channels and client-side feed categories. Commands are lowercase without the leading slash.",
+  "type": "object",
+  "properties": {
+    "format": { "const": "zea-repo/channels" },
+    "version": { "const": 1 },
+    "writeChannels": {
+      "type": "array",
+      "description": "Server channels the player can write to with commands.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 2, "maxLength": 50 },
+          "commands": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9]*$" }
+          }
+        },
+        "required": ["id", "name", "commands"],
+        "additionalProperties": false
+      }
+    },
+    "readonlyFeeds": {
+      "type": "array",
+      "description": "Message categories that have no writable server command (e.g. Discord integration).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 2, "maxLength": 50 },
+          "note": { "type": "string", "maxLength": 200 }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["format", "version", "writeChannels", "readonlyFeeds"],
+  "additionalProperties": false
+}

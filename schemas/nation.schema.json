@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ZaminMC/ZEA-REPO/main/schemas/nation.schema.json",
+  "title": "ZEA-REPO nation entry",
+  "description": "Curated, community-maintained nation data. Live data (residents, balance, towns, allies) is never stored here - it comes from the EarthMC API at runtime.",
+  "type": "object",
+  "properties": {
+    "version": { "const": 1 },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 64,
+      "description": "Exact in-game nation name."
+    },
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "description": "Nation UUID from the EarthMC API (GET /v4/nations). Stable identity key."
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Neutral, community-written description."
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "website": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "discord": {
+          "type": ["string", "null"],
+          "pattern": "^https://(discord\\.gg|discord\\.com)/"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lastVerified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the data in this file was last checked against reality."
+    }
+  },
+  "required": ["version", "name", "uuid", "lastVerified"],
+  "additionalProperties": false
+}

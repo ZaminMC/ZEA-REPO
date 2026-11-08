@@ -1,0 +1,69 @@
+{
+  "format": "zea-repo/badges",
+  "version": 1,
+  "badges": [
+    {
+      "symbol": "🌎",
+      "id": "anniversary-globe",
+      "name": "EarthMC 10th anniversary Globe",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "❣",
+      "id": "server-heart",
+      "name": "Server Heart",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "+",
+      "id": "supporter",
+      "name": "Supporter",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "🐇",
+      "id": "rabbit",
+      "name": "Rabbit",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "🔨",
+      "id": "golden-hammer",
+      "name": "Golden Hammer",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "🐉",
+      "id": "dragon",
+      "name": "Dragon",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "🎉",
+      "id": "new-player",
+      "name": "New Player",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "💎",
+      "id": "top-10-mining",
+      "name": "Top 10 Mining",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11"
+    },
+    {
+      "symbol": "🔥",
+      "id": "snowstorm",
+      "name": "Snowstorm badge",
+      "verified": true,
+      "source": "observed in EarthMC global chat, 2026-11; may expose a clickable store link"
+    }
+  ]
+}

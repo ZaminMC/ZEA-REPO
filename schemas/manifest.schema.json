@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ZaminMC/ZEA-REPO/main/schemas/manifest.schema.json",
+  "title": "ZEA-REPO manifest",
+  "description": "CI-generated repository index. Do not edit by hand.",
+  "type": "object",
+  "properties": {
+    "format": { "const": "zea-repo/manifest" },
+    "version": { "const": 1 },
+    "generated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datasets": {
+      "type": "object",
+      "description": "Dataset id -> file index. Entity datasets group per-entity files.",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z][a-z0-9-]*$": {
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": "object",
+              "description": "Repository-relative path -> sha256 of file bytes.",
+              "propertyNames": {
+                "pattern": "^datasets/.+\\.json$"
+              },
+              "additionalProperties": { "$ref": "#/$defs/sha256" }
+            }
+          },
+          "required": ["files"],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "required": ["format", "version", "generated", "datasets"],
+  "additionalProperties": false,
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}
