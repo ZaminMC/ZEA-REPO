@@ -30,6 +30,10 @@ credentials, API keys, or data you cannot verify in-game.
 - JSON keys are camelCase. UTF-8 encoding. Two-space indent.
 - `uuid` values must be copied from the official API
   (`https://api.earthmc.net/v4/nations` or `/v4/towns` list endpoints).
+- `messageTag` values in `datasets/channels.json` must be copied verbatim
+  from observed in-game chat (case included); the town-bearing nation form
+  is expressed with `messageTagCarriesTown`, never by editing the tag
+  string.
 - Keep descriptions neutral and under 1000 characters.
 - Set `lastVerified` to the date you actually checked the data.
 - Do **not** edit `manifest.json` — CI regenerates it when your PR merges.

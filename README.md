@@ -17,7 +17,7 @@ ZEA-REPO/
 ├── schemas/                      JSON Schema for every data shape
 ├── datasets/
 │   ├── badges.json               chat badge symbols and verified meanings
-│   ├── channels.json             writable server channels + read-only feeds
+│   ├── channels.json             server channels, observed chat tags, feeds
 │   ├── nations/<slug>.json       curated nation entries
 │   └── towns/<slug>.json         curated town entries
 ├── scripts/validate.py           validation + manifest generator

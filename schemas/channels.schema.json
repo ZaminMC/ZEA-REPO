@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "format": { "const": "zea-repo/channels" },
-    "version": { "const": 1 },
+    "version": { "const": 2 },
     "writeChannels": {
       "type": "array",
       "description": "Server channels the player can write to with commands.",
@@ -20,9 +20,21 @@
             "minItems": 1,
             "uniqueItems": true,
             "items": { "type": "string", "pattern": "^[a-z][a-z0-9]*$" }
+          },
+          "messageTag": {
+            "type": "string",
+            "description": "Exact bracket label opening that channel's chat messages, e.g. \"[Local] Name: content\". Absent when the channel's messages carry no leading label (global uses badges + [Nation|Town] affiliation). Must be copied verbatim from observed in-game chat.",
+            "pattern": "^[A-Z][A-Za-z ]{1,30}$"
+          },
+          "messageTagCarriesTown": {
+            "type": "boolean",
+            "description": "True when the tag is followed by the sender's town inside the bracket (nation chat: \"[Nation Chat|Town]\")."
           }
         },
         "required": ["id", "name", "commands"],
+        "dependentRequired": {
+          "messageTagCarriesTown": ["messageTag"]
+        },
         "additionalProperties": false
       }
     },

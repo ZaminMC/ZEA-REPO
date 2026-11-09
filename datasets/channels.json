@@ -1,6 +1,6 @@
 {
   "format": "zea-repo/channels",
-  "version": 1,
+  "version": 2,
   "writeChannels": [
     {
       "id": "global",
@@ -10,22 +10,27 @@
     {
       "id": "local",
       "name": "Local",
-      "commands": ["local"]
+      "commands": ["local"],
+      "messageTag": "Local"
     },
     {
       "id": "trade",
       "name": "Trade",
-      "commands": ["tradechat"]
+      "commands": ["tradechat"],
+      "messageTag": "Trade"
     },
     {
       "id": "nation",
       "name": "Nation",
-      "commands": ["nc", "nationchat"]
+      "commands": ["nc", "nationchat"],
+      "messageTag": "Nation Chat",
+      "messageTagCarriesTown": true
     },
     {
       "id": "town",
       "name": "Town",
-      "commands": ["tc"]
+      "commands": ["tc"],
+      "messageTag": "Town Chat"
     }
   ],
   "readonlyFeeds": [

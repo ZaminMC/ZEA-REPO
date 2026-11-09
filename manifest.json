@@ -1,7 +1,7 @@
 {
   "format": "zea-repo/manifest",
   "version": 1,
-  "generated": "2026-11-08T12:41:32Z",
+  "generated": "2026-11-09T10:05:28Z",
   "datasets": {
     "badges": {
       "files": {
@@ -10,7 +10,7 @@
     },
     "channels": {
       "files": {
-        "datasets/channels.json": "8cb3bbe6f23dfcf75ae070b0d5b4d50dc3cc620a3dfd29c4e8ed29d00b02258e"
+        "datasets/channels.json": "702e275791b7b326f596eca8eec614446b40859a8018d45d3568113a97f8d392"
       }
     }
   }
